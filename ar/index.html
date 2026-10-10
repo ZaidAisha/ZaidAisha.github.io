@@ -218,6 +218,22 @@ h2{font-size:clamp(2.2rem,9.5vw,2.8rem);line-height:1.45}
 .vc figcaption{margin-top:12px;font-size:.9rem;color:var(--rg-2)}
 .vc figcaption::before{content:"— "}
 .vc-d{margin-top:10px;font-size:.85rem;color:var(--blush)}
+/* ayah, families, letter */
+.ayah{max-width:360px;margin:0 auto 22px}
+.ayah-t{font-family:"Amiri",serif;font-size:1.22rem;line-height:2.1;color:var(--wine)}
+.ayah-s{margin-top:4px;font-size:.82rem;color:var(--ink-soft)}
+.families{font-size:1.08rem;line-height:1.95;color:var(--ink)}
+.families b{font-weight:700;color:var(--wine)}
+.dua{margin-top:6px;font-size:.98rem;color:var(--rg-3)}
+.letter-sec{padding-top:24px}
+.letter{position:relative;max-width:360px;margin:0 auto;padding:34px 26px 30px;text-align:center;
+  background:#fffaf6;border:1px solid var(--rg-2);box-shadow:0 0 0 6px #fffaf6,0 0 0 7px var(--line),0 24px 40px -22px rgba(66,10,22,.35)}
+.letter p{margin:0 0 6px;font-size:1.12rem;line-height:1.9;color:var(--ink)}
+.letter .l-open{font-family:var(--script);font-size:1.7rem;line-height:1.6;color:var(--wine);margin-bottom:12px}
+.letter .l-amma{margin-top:16px;font-family:var(--script);font-size:1.45rem;color:var(--wine)}
+.letter .l-close{font-size:1.2rem;color:var(--wine);margin-top:4px}
+.letter .lc{position:absolute;width:14px;height:14px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--rg-1),var(--rg-2) 45%,var(--rg-4))}
+.lc.tl{top:-8px;left:-8px}.lc.tr{top:-8px;right:-8px}.lc.bl{bottom:-8px;left:-8px}.lc.br{bottom:-8px;right:-8px}
 /* rsvp + footer */
 label,.legend{font-style:normal}
 .send,.btn{font-family:var(--script)}
@@ -269,7 +285,12 @@ footer .fn{font-size:2.6rem;line-height:1.5}
 <main>
   <!-- المقدمة -->
   <section class="intro" id="top">
-    <p class="eyebrow">يسعدنا أن نشارككم فرحة خطوبتنا</p>
+    <div class="ayah">
+      <svg class="p-orn" viewBox="0 0 200 24" aria-hidden="true"><path d="M10 12 H80 M120 12 H190" stroke="#c48b70" stroke-width=".9"/><use href="#crest" x="76" y="-2" width="48" height="20"/></svg>
+      <p class="ayah-t">﴿ وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُمْ أَزْوَاجًا لِّتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُم مَّوَدَّةً وَرَحْمَةً ۚ إِنَّ فِي ذَٰلِكَ لَآيَاتٍ لِّقَوْمٍ يَتَفَكَّرُونَ ﴾</p>
+      <p class="ayah-s">سورة الروم · ٢١</p>
+    </div>
+    <p class="families">بكل معاني الحب والودّ<br>تتشرّف <b>عائلة الطويل</b> و<b>عائلة العبدلي</b><br>بدعوتكم لحضور حفل خطوبة نجليهما</p>
     <svg class="atoz" viewBox="0 0 380 150" role="img" aria-label="سهم مرسوم من حرف العين إلى حرف الزاي">
       <text class="letter" x="330" y="112" text-anchor="middle" font-size="104">ع</text>
       <text class="letter" x="52" y="112" text-anchor="middle" font-size="104">ز</text>
@@ -280,6 +301,7 @@ footer .fn{font-size:2.6rem;line-height:1.5}
       </g>
     </svg>
     <p class="story"><b>عائشة</b> و <b>زيد</b></p>
+    <p class="dua">بارك الله لهما، وبارك عليهما، وجمع بينهما في خير</p>
     <p class="couple" data-f="longDate">الأحد ٨ نوفمبر ٢٠٢٦</p>
 
     <input type="checkbox" id="openInv" class="opener" aria-label="افتح الدعوة"><label class="stage" id="stage" for="openInv">
@@ -368,7 +390,7 @@ footer .fn{font-size:2.6rem;line-height:1.5}
           <use href="#crest" x="70" y="-6" width="100" height="40"/>
         </svg>
         <div class="ctext">
-          <p class="small">ندعوكم لمشاركتنا<br>فرحة خطوبة</p>
+          <p class="small">تتشرّف عائلتا الطويل والعبدلي<br>بدعوتكم لحفل خطوبة</p>
           <p class="n">عائشة</p>
           <p class="and">و</p>
           <p class="n">زيد</p>
@@ -411,6 +433,22 @@ footer .fn{font-size:2.6rem;line-height:1.5}
         <polygon points="70,68 80,80 80,68" fill="#c3cfdb"/><polygon points="90,68 80,80 80,68" fill="#e9eef4"/>
         <path d="M95 54 l1.5 4 4 1.5 -4 1.5 -1.5 4 -1.5-4 -4-1.5 4-1.5z" fill="#fff"/>
       </svg>
+    </div>
+  </section>
+
+  <!-- رسالة -->
+  <section class="letter-sec" aria-label="رسالة">
+    <div class="letter">
+      <span class="lc tl"></span><span class="lc tr"></span><span class="lc bl"></span><span class="lc br"></span>
+      <p class="l-open">بِسْمِ خالِقِ الحُبِّ نَبْدَأ..</p>
+      <p>بِسْمِ رَبِّ العِشْقِ مُقَرِّبِ القُلُوبِ..</p>
+      <p>بِسْمِ المَوَدَّةِ وَالرَّحْمَةِ تَجْتَمِعُ الأَرْواحُ..</p>
+      <p>بِسْمِ الوَفاءِ فَلا مُرَّ بَعْدَ حُلْوِكِ..</p>
+      <p>بِسْمِ الهَوانِ فَلا تَهُونِي وَلا أَهُونُ..</p>
+      <p>بِسْمِ النُّورِ الَّذِي يُضِيءُ قَلْبَيْنا..</p>
+      <p>بِسْمِ الإِخْلاصِ وَالصَّبْرِ وَالهَوَى..</p>
+      <p class="l-amma">أَمَّا بَعْدُ..</p>
+      <p class="l-close">فَلَكِ مِنْ عُمْرِي كُلُّ مَا فِيهِ، وَلِي مَنْزِلٌ فِي عَيْنَيْكِ أَسْكُنُهُ وَأَهْوَاهُ</p>
     </div>
   </section>
 
