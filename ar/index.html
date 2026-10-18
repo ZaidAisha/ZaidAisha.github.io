@@ -86,8 +86,8 @@ p{margin:0}
 .cameo .n{font-family:var(--script);font-size:2.3rem;line-height:1;color:var(--wine)}
 .cameo .and{font-family:var(--script);font-size:1.2rem;color:var(--rg-3);line-height:1}
 .cameo .when{font-size:.7rem;color:var(--ink-soft);margin-top:8px;line-height:1.35;font-style:italic}
-.heartframe{top:430px;left:0;width:54%;overflow:visible;filter:drop-shadow(0 14px 18px rgba(66,10,22,.3));transform:rotate(-6deg)}
-.ringbox{top:500px;right:2%;width:36%;filter:drop-shadow(0 14px 16px rgba(66,10,22,.35));transform:rotate(7deg)}
+.heartframe{top:420px;left:2%;width:50%;overflow:visible;filter:drop-shadow(0 14px 18px rgba(66,10,22,.28));transform:rotate(-8deg)}
+.ringbox{top:490px;right:0;width:44%;filter:drop-shadow(0 14px 16px rgba(66,10,22,.28));transform:rotate(6deg)}
 
 /* ---------- Countdown ---------- */
 .countdown h2{font-size:2.3rem;margin-bottom:10px}
@@ -462,40 +462,70 @@ footer .fn{font-size:2.6rem;line-height:1.5}
         </div>
       </div>
 
-      <svg class="heartframe" viewBox="0 0 200 190" aria-hidden="true">
+      <svg class="heartframe bouquet" viewBox="0 0 200 230" aria-hidden="true">
         <defs>
-          <path id="hp" d="M100 176 C40 130 10 100 10 62 C10 30 34 10 60 10 C78 10 92 20 100 34 C108 20 122 10 140 10 C166 10 190 30 190 62 C190 100 160 130 100 176Z"/>
+          <linearGradient id="stem" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6b7a4c"/><stop offset="1" stop-color="#4c5a34"/></linearGradient>
+          <radialGradient id="petalD" cx=".4" cy=".35" r=".8"><stop offset="0" stop-color="#c94a62"/><stop offset=".55" stop-color="#8c2338"/><stop offset="1" stop-color="#4a0b18"/></radialGradient>
+          <radialGradient id="petal2D" cx=".45" cy=".4" r=".8"><stop offset="0" stop-color="#d9607a"/><stop offset=".6" stop-color="#a8304a"/><stop offset="1" stop-color="#6d1426"/></radialGradient>
+          <symbol id="roseD" viewBox="-30 -30 60 60">
+            <circle r="27" fill="url(#petalD)"/>
+            <path d="M-24 4 C-26 -14 -10 -26 4 -24 C-8 -18 -14 -8 -12 6 Z" fill="#9b2a42" opacity=".85"/>
+            <path d="M24 -2 C26 16 10 26 -6 24 C8 18 14 8 12 -6 Z" fill="#5a0d1c" opacity=".7"/>
+            <circle r="17" fill="url(#petal2D)"/>
+            <path d="M-12 -6 C-10 -16 6 -18 12 -8 C4 -12 -4 -10 -6 -2 Z" fill="#c94a62"/>
+            <path d="M10 8 C6 16 -10 16 -12 6 C-6 10 2 10 6 2 Z" fill="#7d1730"/>
+            <circle r="8" fill="#b5566c"/>
+            <path d="M-5 -2 C-4 -7 4 -7 5 -1 C2 -4 -2 -4 -5 -2Z M4 3 C2 6 -3 6 -4 2 C-1 4 2 4 4 3Z" fill="#4a0b18"/>
+          </symbol>
+          <linearGradient id="rib" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff4f2"/><stop offset=".5" stop-color="#f2cdd2"/><stop offset="1" stop-color="#d98a9c"/></linearGradient>
         </defs>
-        <use href="#hp" fill="url(#gld)" filter="url(#gilt)"/>
-        <use href="#hp" transform="translate(100 90) scale(.9) translate(-100 -90)" fill="none" stroke="#5b2c22" stroke-width="5" opacity=".25"/>
-        <use href="#hp" transform="translate(100 90) scale(.9) translate(-100 -90)" fill="none" stroke="url(#gld)" stroke-width="3.6" stroke-dasharray="0 6.6" stroke-linecap="round" filter="url(#gilt)"/>
-        <use href="#hp" transform="translate(100 90) scale(.8) translate(-100 -90)" fill="url(#velv)"/>
-        <use href="#hp" transform="translate(100 90) scale(.8) translate(-100 -90)" fill="#000" filter="url(#velvet)" opacity=".4"/>
-        <use href="#hp" transform="translate(100 90) scale(.8) translate(-100 -90)" fill="none" stroke="#fff3e6" stroke-width="1.2"/>
-        <g fill="url(#gld)" filter="url(#gilt)" font-family="Pinyon Script, cursive" text-anchor="middle" direction="ltr">
-          <text x="100" y="98" font-size="46">A ♡ Z</text>
+        <g stroke="url(#stem)" stroke-width="3" stroke-linecap="round">
+          <path d="M100 120 L92 214"/><path d="M100 120 L100 218"/><path d="M100 120 L108 214"/><path d="M96 120 L84 208"/><path d="M104 120 L116 208"/>
         </g>
+        <use href="#leaf" x="22" y="70" width="56" height="22" transform="rotate(-35 50 81)"/>
+        <use href="#leaf" x="122" y="70" width="56" height="22" transform="rotate(35 150 81)"/>
+        <use href="#leaf" x="34" y="108" width="50" height="20" transform="rotate(-10 59 118)"/>
+        <use href="#leaf" x="116" y="108" width="50" height="20" transform="rotate(10 141 118)"/>
+        <use href="#leaf" x="80" y="0" width="40" height="16" transform="rotate(-90 100 8)"/>
+        <use href="#rose" x="50" y="20" width="56" height="56"/>
+        <use href="#roseD" x="96" y="18" width="58" height="58"/>
+        <use href="#roseD" x="28" y="56" width="54" height="54"/>
+        <use href="#rose" x="118" y="56" width="54" height="54"/>
+        <use href="#rose" x="70" y="52" width="62" height="62"/>
+        <use href="#rose" x="48" y="92" width="44" height="44"/>
+        <use href="#roseD" x="108" y="92" width="44" height="44"/>
+        <use href="#rose" x="80" y="6" width="40" height="40"/>
+        <g fill="#fffaf6"><circle cx="44" cy="44" r="2.4"/><circle cx="160" cy="40" r="2.4"/><circle cx="30" cy="96" r="2"/><circle cx="172" cy="100" r="2"/><circle cx="100" cy="132" r="2.2"/></g>
+        <path d="M86 150 C70 136 52 140 56 154 C60 166 78 162 92 156Z" fill="url(#rib)" stroke="#c9707f" stroke-width=".7"/>
+        <path d="M114 150 C130 136 148 140 144 154 C140 166 122 162 108 156Z" fill="url(#rib)" stroke="#c9707f" stroke-width=".7"/>
+        <path d="M94 156 C88 176 80 192 70 206 L80 204 L84 212 C94 196 100 176 100 160Z" fill="url(#rib)" stroke="#c9707f" stroke-width=".7"/>
+        <path d="M106 156 C112 176 120 192 130 206 L120 204 L116 212 C106 196 100 176 100 160Z" fill="url(#rib)" stroke="#c9707f" stroke-width=".7"/>
+        <rect x="88" y="144" width="24" height="18" rx="7" fill="url(#rib)" stroke="#c9707f" stroke-width=".7"/>
+        <path d="M84 146 Q100 140 116 146" stroke="url(#gld)" stroke-width="1.2" fill="none"/>
       </svg>
 
-      <svg class="ringbox" viewBox="0 0 160 170" aria-hidden="true">
-        <defs><linearGradient id="vel2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8c2338"/><stop offset="1" stop-color="#3a0712"/></linearGradient></defs>
-        <rect x="14" y="8" width="132" height="66" rx="10" fill="url(#vel2)"/>
-        <rect x="14" y="8" width="132" height="66" rx="10" fill="#000" filter="url(#velvet)" opacity=".35"/>
-        <rect x="24" y="18" width="112" height="46" rx="6" fill="url(#satin)"/>
-        <rect x="24" y="18" width="112" height="46" rx="6" fill="none" stroke="url(#gld)" stroke-width="1.2"/>
-        <text x="80" y="49" text-anchor="middle" font-family="Pinyon Script, cursive" font-size="20" fill="#b97c63" direction="ltr">A &amp; Z</text>
-        <rect x="12" y="72" width="136" height="5" rx="2" fill="url(#gld)" filter="url(#gilt)"/>
-        <rect x="8" y="77" width="144" height="86" rx="12" fill="url(#vel2)"/>
-        <rect x="8" y="77" width="144" height="86" rx="12" fill="#000" filter="url(#velvet)" opacity=".35"/>
-        <rect x="18" y="82" width="124" height="30" rx="14" fill="#4a0b18"/>
-        <ellipse cx="80" cy="92" rx="21" ry="17" fill="none" stroke="url(#gld)" stroke-width="5.5" filter="url(#gilt)"/>
-        <rect x="18" y="96" width="124" height="16" rx="8" fill="#5a0d1c"/>
-        <path d="M18 104 H142" stroke="#2e0610" stroke-width="2"/>
-        <g filter="url(#gilt)" fill="url(#gld)"><path d="M73 76 L76 70 L84 70 L87 76 L80 79Z"/></g>
-        <polygon points="70,68 75,59 85,59 90,68 80,80" fill="#f4f7fb"/>
-        <polygon points="75,59 80,68 70,68" fill="#d8e1ea"/><polygon points="85,59 90,68 80,68" fill="#ffffff"/>
-        <polygon points="70,68 80,80 80,68" fill="#c3cfdb"/><polygon points="90,68 80,80 80,68" fill="#e9eef4"/>
-        <path d="M95 54 l1.5 4 4 1.5 -4 1.5 -1.5 4 -1.5-4 -4-1.5 4-1.5z" fill="#fff"/>
+      <svg class="ringbox pillow" viewBox="0 0 180 170" aria-hidden="true">
+        <defs>
+          <linearGradient id="pil" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff5f3"/><stop offset=".5" stop-color="#f6d6db"/><stop offset="1" stop-color="#e2aab5"/></linearGradient>
+          <linearGradient id="band" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff1e4"/><stop offset=".3" stop-color="#e9bfa3"/><stop offset=".55" stop-color="#b97c63"/><stop offset=".8" stop-color="#f6dccb"/><stop offset="1" stop-color="#a8665c"/></linearGradient>
+        </defs>
+        <path d="M90 14 C110 30 150 44 166 62 C170 70 168 80 160 88 C140 108 112 136 96 154 C92 158 88 158 84 154 C68 136 40 108 20 88 C12 80 10 70 14 62 C30 44 70 30 90 14Z" fill="url(#pil)"/>
+        <path d="M90 14 C110 30 150 44 166 62 C170 70 168 80 160 88 C140 108 112 136 96 154 C92 158 88 158 84 154 C68 136 40 108 20 88 C12 80 10 70 14 62 C30 44 70 30 90 14Z" fill="#fff" filter="url(#paper)"/>
+        <path d="M90 22 C108 36 144 50 158 66 C161 72 160 79 153 85 C135 103 110 128 95 145 C92 148 88 148 85 145 C70 128 45 103 27 85 C20 79 19 72 22 66 C36 50 72 36 90 22Z" fill="none" stroke="url(#gld)" stroke-width="1.6" stroke-dasharray="0 5" stroke-linecap="round"/>
+        <path d="M60 52 Q90 86 120 52 M60 120 Q90 86 120 120" stroke="#e2aab5" stroke-width="1" fill="none" opacity=".7"/>
+        <path d="M84 86 C70 74 56 76 60 88 C64 98 78 94 88 90Z" fill="#c9707f"/>
+        <path d="M96 86 C110 74 124 76 120 88 C116 98 102 94 92 90Z" fill="#c9707f"/>
+        <path d="M86 92 C82 106 76 116 70 124 M94 92 C98 106 104 116 110 124" stroke="#c9707f" stroke-width="4" stroke-linecap="round" fill="none"/>
+        <circle cx="90" cy="89" r="6" fill="#b5566c"/>
+        <ellipse cx="90" cy="70" rx="22" ry="9" fill="none" stroke="#7a4535" stroke-width="7" opacity=".25" transform="translate(2 4)"/>
+        <ellipse cx="90" cy="66" rx="22" ry="9" fill="none" stroke="url(#band)" stroke-width="6" filter="url(#gilt)"/>
+        <path d="M84 57 L86 51 L94 51 L96 57" fill="url(#band)" stroke="#a8665c" stroke-width=".6"/>
+        <polygon points="78,44 84,34 96,34 102,44 90,58" fill="#f4f7fb"/>
+        <polygon points="84,34 90,44 78,44" fill="#d8e1ea"/><polygon points="96,34 102,44 90,44" fill="#ffffff"/>
+        <polygon points="78,44 90,58 90,44" fill="#c3cfdb"/><polygon points="102,44 90,58 90,44" fill="#e9eef4"/>
+        <path d="M84 34 L90 44 L96 34" fill="none" stroke="#fff" stroke-width=".6"/>
+        <path d="M112 26 l2 5 5 2 -5 2 -2 5 -2-5 -5-2 5-2z" fill="#fff"/>
+        <path d="M68 32 l1.4 3.4 3.4 1.4 -3.4 1.4 -1.4 3.4 -1.4-3.4 -3.4-1.4 3.4-1.4z" fill="#fff"/>
       </svg>
     </div>
   </section>
