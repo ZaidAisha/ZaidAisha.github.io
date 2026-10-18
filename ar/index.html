@@ -280,6 +280,10 @@ footer .fn i{font-size:.6em}
 .opener:checked + .stage.env .glow,.stage.env.open .glow{display:none}
 .opener:checked + .stage.env .ec,.stage.env.open .ec{transform:translateY(-82%)}
 @media (prefers-reduced-motion:reduce){.env .seal,.env .glow{animation:none}.env .ec,.env .efl,.stage.env{transition:none}}
+/* ---------- details banner ---------- */
+.banner.lux svg{display:block;width:100%;height:auto}
+.banner.lux h2{position:absolute;left:0;right:0;top:44%;bottom:0;display:grid;place-items:center;margin:0;font-size:clamp(1.9rem,8.4vw,2.5rem);
+  text-shadow:none;background:linear-gradient(135deg,#fff1e4,#e9bfa3 40%,#f6dccb 60%,#d9a194);-webkit-background-clip:text;background-clip:text;color:transparent}
 /* rsvp + footer */
 label,.legend{font-style:normal}
 .send,.btn{font-family:var(--script)}
@@ -507,18 +511,33 @@ footer .fn{font-size:2.6rem;line-height:1.5}
 
 
   <!-- تفاصيل الحفل -->
-  <div class="banner">
-    <svg viewBox="0 0 440 170" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+  <div class="banner lux">
+    <svg viewBox="0 0 440 190" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
-        <linearGradient id="dsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3f0a17"/><stop offset=".45" stop-color="#8c2338"/><stop offset=".75" stop-color="#d98a9c"/><stop offset="1" stop-color="#f6cfd6"/></linearGradient>
-        <radialGradient id="sun"><stop offset="0" stop-color="#fff0f0"/><stop offset=".4" stop-color="#fbd0d6" stop-opacity=".8"/><stop offset="1" stop-color="#fbd0d6" stop-opacity="0"/></radialGradient>
+        <pattern id="girih" width="36" height="36" patternUnits="userSpaceOnUse">
+          <g fill="none" stroke="#e9bfa3" stroke-width=".7">
+            <rect x="10" y="10" width="16" height="16"/>
+            <rect x="10" y="10" width="16" height="16" transform="rotate(45 18 18)"/>
+            <path d="M0 0 L10 10 M36 0 L26 10 M0 36 L10 26 M36 36 L26 26"/>
+          </g>
+        </pattern>
+        <radialGradient id="vig" cx=".5" cy=".5" r=".7"><stop offset=".45" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#14010a" stop-opacity=".6"/></radialGradient>
+        <linearGradient id="archFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a0b18"/><stop offset="1" stop-color="#2a0510"/></linearGradient>
       </defs>
-      <rect width="440" height="170" fill="url(#dsky)"/>
-      <circle cx="140" cy="112" r="60" fill="url(#sun)"/>
-      <path d="M0 118 Q80 92 170 112 T340 104 T440 110 V170 H0Z" fill="#b5566c"/>
-      <path d="M0 138 Q110 110 230 134 T440 126 V170 H0Z" fill="#7d1a30"/>
-      <path d="M0 156 Q140 136 290 154 T440 150 V170 H0Z" fill="#4a0b18"/>
-      <g stroke="#3a0812" stroke-width="2" fill="none"><path d="M378 122 v-22 M378 100 c-8-4-14-2-18 2 M378 100 c8-5 14-3 18 1 M378 102 c-6-8-4-14 0-16 M378 102 c6-8 4-14 0-16"/></g>
+      <rect width="440" height="190" fill="url(#velv)"/>
+      <rect width="440" height="190" fill="#000" filter="url(#velvet)" opacity=".3"/>
+      <rect width="440" height="190" fill="url(#girih)" opacity=".22"/>
+      <rect width="440" height="190" fill="url(#vig)"/>
+      <rect x="10" y="10" width="420" height="170" fill="none" stroke="url(#gld)" stroke-width="1.2"/>
+      <rect x="15" y="15" width="410" height="160" fill="none" stroke="url(#gld)" stroke-width=".6" opacity=".6"/>
+      <path d="M40 120 H118 M322 120 H400" stroke="url(#gld)" stroke-width=".9"/>
+      <g fill="url(#gld)"><circle cx="40" cy="120" r="2.4"/><circle cx="400" cy="120" r="2.4"/>
+        <path d="M118 120 l5 -5 5 5 -5 5z"/><path d="M322 120 l-5 -5 -5 5 5 5z"/></g>
+      <path d="M128 178 V112 C128 80 170 66 196 44 Q212 30 220 14 Q228 30 244 44 C270 66 312 80 312 112 V178Z" fill="url(#archFill)"/>
+      <path d="M128 178 V112 C128 80 170 66 196 44 Q212 30 220 14 Q228 30 244 44 C270 66 312 80 312 112 V178" fill="none" stroke="url(#gld)" stroke-width="2.2" filter="url(#gilt)"/>
+      <path d="M138 178 V114 C138 86 176 74 200 54 Q214 42 220 28 Q226 42 240 54 C264 74 302 86 302 114 V178" fill="none" stroke="url(#gld)" stroke-width=".8" stroke-dasharray="0 5" stroke-linecap="round"/>
+      <g fill="url(#gld)" filter="url(#gilt)"><path d="M220 2 l5 9 -5 9 -5 -9z"/></g>
+      <g fill="#fbe2d9" opacity=".8"><circle cx="70" cy="48" r="1.2"/><circle cx="96" cy="70" r=".9"/><circle cx="360" cy="44" r="1.2"/><circle cx="384" cy="74" r=".9"/><circle cx="58" cy="150" r=".9"/><circle cx="380" cy="152" r=".9"/></g>
     </svg>
     <h2>تفاصيل الحفل</h2>
   </div>
